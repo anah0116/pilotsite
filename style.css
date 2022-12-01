@@ -210,7 +210,7 @@ header nav ul li a {
   .info_grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin: 2rem 0 0 0;
+    margin: 1rem 0 0 0;
     gap: 1rem;
   }
 }
