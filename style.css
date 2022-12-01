@@ -14,8 +14,16 @@ img {
   display: block;
 }
 
+/* fonts */
+@font-face {
+  font-family: "tekomedium";
+  src: url("teko-medium-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 /* video */
 
+/* link til hita.dk video */
 video {
   width: 100%;
   border-style: solid;
@@ -26,6 +34,21 @@ video {
   margin-bottom: 4rem;
 }
 
+/* youtube link video */
+iframe {
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 16 / 9;
+
+  border-style: solid;
+  /* border-color: #5c16c5; */
+  border-color: #5d1cc0;
+  border-radius: 4px;
+  border-width: 8px;
+}
+
+/* video tekst */
 #se_video_her {
   /* afstand fr denne linje og grid ovenover */
   margin-top: 7rem;
@@ -40,6 +63,7 @@ span {
 
 header ul li a {
   padding: 1rem;
+  font-family: tekomedium;
 }
 
 main {
@@ -142,9 +166,30 @@ dt {
   padding: 30px;
   text-decoration: none;
   border-radius: 10px;
+
+  background-image: url(fotos/knap1.webp);
+
   box-shadow: 7px 7px #5d1cc0;
-  background-image: url(fotos/rs_foto5.JPG);
   background-size: cover;
+}
+
+/*              KNAP POP                */
+.pop {
+  animation-name: pop_kf;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes pop_kf {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 1.1;
+  }
 }
 
 /* .knap {
@@ -188,7 +233,7 @@ header nav ul li a {
     padding-top: 20px;
     padding-bottom: 20px;
 
-    font-size: 2rem;
+    font-size: 3rem;
   }
   /* andet */
   main {
